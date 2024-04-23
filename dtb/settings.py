@@ -181,3 +181,33 @@ TELEGRAM_LOGS_CHAT_ID = os.getenv("TELEGRAM_LOGS_CHAT_ID", default=None)
 #     send_default_pii=True
 # )
 
+APP_NAME = os.environ.get('APP_NAME', default='dtb')
+LOGGING = {
+    'version': 1,
+    'disable_existing_loggers': False,
+    'handlers': {
+        'file': {
+            'level': 'DEBUG',
+            'class': 'logging.FileHandler',
+            'filename': f'/tmp/{APP_NAME}.log',  # Путь к файлу логов
+        },
+    },
+    'loggers': {
+        # 'django': {
+        #     'handlers': ['file'],
+        #     'level': 'DEBUG',
+        #     'propagate': True,
+        # },
+        'root': {  # Использование root logger
+            'handlers': ['file'],
+            'level': 'DEBUG',  # Изменяем уровень логирования на DEBUG
+            'propagate': True,
+        },
+        'tgbot': {  # Добавляем конфигурацию для логгера tgbot.dispatcher
+            'handlers': ['file'],
+            'level': 'DEBUG',  # Изменяем уровень логирования на DEBUG
+            'propagate': True,
+        },
+    },
+
+}
