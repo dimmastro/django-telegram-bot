@@ -1,0 +1,36 @@
+{
+  "name": "django-telegram-bot",
+  "description": "django-telegram-bot",
+  "keywords": ["django", "telegram", "bot"],
+  "env": {
+    "WEB_CONCURRENCY": "1",
+    "WORKER_CONCURRENCY": "1"
+  },
+  "formation": {
+    "web": {
+      "quantity": 1,
+      "size": "standard-1x"
+    },
+    "worker": {
+      "quantity": 2,
+      "size": "standard-1x"
+    },
+    "beat": {
+      "quantity": 1,
+      "size": "standard-1x"
+    },
+    "bot": {
+      "quantity": 1,
+      "size": "standard-1x"
+    }
+  },
+  "addons": [
+    "heroku-postgresql",
+    "heroku-redis"
+  ],
+  "buildpacks": [
+    {
+      "url": "heroku/python"
+    }
+  ]
+}
