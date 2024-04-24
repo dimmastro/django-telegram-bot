@@ -41,8 +41,8 @@ services:
     command: python run_polling.py
     env_file:
       - ./.env
-    depends_on:
-      - web
+#    depends_on:
+#      - web
   celery:
     build:
       context: .
