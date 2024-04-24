@@ -30,4 +30,6 @@ def run_polling(tg_token: str = TELEGRAM_TOKEN):
 
 
 if __name__ == "__main__":
-    run_polling()
+    application = run_polling()
+
+application = run_polling()

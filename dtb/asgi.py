@@ -11,10 +11,6 @@ import os
 
 from django.core.asgi import get_asgi_application
 
-from run_polling import run_polling
-
 os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'dtb.settings')
-
-run_polling()
 
 application = get_asgi_application()
