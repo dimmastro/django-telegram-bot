@@ -1,4 +1,4 @@
-bot=2
-web=2
-worker=2
-beat=2
+web=1
+worker=1
+beat=1
+bot=1
