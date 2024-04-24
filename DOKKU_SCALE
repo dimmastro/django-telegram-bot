@@ -1,3 +1,4 @@
 web=1
-worker=0
-beat=0
+worker=1
+beat=1
+bot=1
