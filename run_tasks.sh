@@ -5,3 +5,4 @@ gunicorn --bind :$PORT --workers 4 --worker-class uvicorn.workers.UvicornWorker 
 echo '1'
 python run_polling.py
 echo '2'
+
