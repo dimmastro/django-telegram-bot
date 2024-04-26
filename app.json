@@ -10,10 +10,20 @@
   "formation": {
     "web": {
       "quantity": 1,
-      "size": "standard-1x"
+      "size": "standard-1x",
+      "healthcheck": {
+        "type": "http",
+        "command": "/health",
+        "interval": 30,
+        "timeout": 10,
+        "checks": 3,
+        "http_options": {
+          "path": "/"
+        }
+      }
     },
     "worker": {
-      "quantity": 2,
+      "quantity": 1,
       "size": "standard-1x"
     },
     "beat": {
