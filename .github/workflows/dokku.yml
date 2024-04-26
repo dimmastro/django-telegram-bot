@@ -14,9 +14,16 @@ jobs:
         with:
           fetch-depth: 0
 
+#      - name: Push to dokku 1
+#        uses: dokku/github-action@master
+#        with:
+#          git_remote_url: 'ssh://dokku@alfaastro.ru:49345/dtb01'
+#          ssh_private_key: ${{ secrets.TIMEWEB_ID_RSA }}
+#          git_push_flags: '--force'
+
       - name: Push to dokku 1
         uses: dokku/github-action@master
         with:
-          git_remote_url: 'ssh://dokku@alfaastro.ru:49345/dtb01'
+          git_remote_url: 'ssh://dokku@astro31.ru/dtb02'
           ssh_private_key: ${{ secrets.TIMEWEB_ID_RSA }}
           git_push_flags: '--force'
