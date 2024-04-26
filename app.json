@@ -4,7 +4,8 @@
   "keywords": ["django", "telegram", "bot"],
   "env": {
     "WEB_CONCURRENCY": "1",
-    "WORKER_CONCURRENCY": "1"
+    "WORKER_CONCURRENCY": "1",
+    "TELEGRAM_TOKEN": "7028657527:AAH_y7ElUzuuYwMTrkWAvrHjoWVTCLAELco"
   },
   "formation": {
     "web": {
